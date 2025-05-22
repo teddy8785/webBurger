@@ -1,18 +1,153 @@
 .pain {
-  position: relative;
-  width: 80%;
-  height: 250px;
-  background: #f4b042;
-  border-radius: 240px 240px 50px 50px;
-  margin: 0 auto;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 80%;
+    height: 250px;
+    background: #f4b042;
+    border-radius: 240px 240px 50px 50px;
+    margin: 0 auto;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .graine {
-  position: absolute;
-  width: 10px;
-  height: 20px;
-  background: #fff3c4;
-  border-radius: 50%;
-  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: #fff3c4;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.salade {
+    width: 80%;
+    height: 60px;
+    margin: -25px auto;
+    background: linear-gradient(to bottom right, #8ed75f, #65b947);
+    clip-path: polygon(0% 50%, 5% 42%, 10% 55%, 15% 40%, 20% 52%, 25% 41%,
+            30% 55%, 35% 39%, 40% 54%, 45% 41%, 50% 53%,
+            55% 42%, 60% 55%, 65% 41%, 70% 53%, 75% 42%,
+            80% 52%, 85% 40%, 90% 55%, 95% 41%, 100% 50%,
+            100% 100%, 0% 100%);
+    border-radius: 10px;
+    box-shadow:
+        inset 0 -5px 8px rgba(0, 0, 0, 0.15),
+        /* ombre interne */
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    /* ombre externe */
+    position: relative;
+    z-index: 5;
+    transform: scaleY(-1);
+}
+
+.tomate-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tomate {
+    width: 19%;
+    height: 30px;
+    margin-top: -10px;
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #b22424 90%);
+    border-radius: 40% / 70%;
+    position: relative;
+    z-index: 3;
+    box-shadow:
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+        /* ombre interne */
+        0 2px 2px rgba(0, 0, 0, 0.1);
+    /* ombre externe douce */
+}
+
+.tomate::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 20%;
+    width: 60%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+.presentation {
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(to bottom, #ffec99, #fcd34d);
+    border-radius: 30px;
+    margin: -8px auto;
+    box-shadow:
+        inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 4;
+}
+
+.steak {
+    width: 75%;
+    height: 100px;
+    margin: auto;
+    background: linear-gradient(to bottom, #5c2e00, #3b1e00);
+    clip-path: polygon(0% 20%, 2% 10%, 6% 14%, 10% 6%, 14% 13%, 18% 8%, 22% 14%,
+            26% 6%, 30% 13%, 34% 7%, 38% 12%, 42% 8%, 46% 14%,
+            50% 6%, 54% 13%, 58% 7%, 62% 14%, 66% 9%, 70% 13%,
+            74% 6%, 78% 14%, 82% 8%, 86% 13%, 90% 7%, 94% 12%,
+            98% 10%, 100% 20%,
+            /* bord haut */
+            100% 80%, 98% 90%, 94% 86%, 90% 94%, 86% 87%, 82% 92%,
+            78% 86%, 74% 94%, 70% 87%, 66% 93%, 62% 87%, 58% 94%,
+            54% 88%, 50% 92%, 46% 87%, 42% 94%, 38% 87%, 34% 92%,
+            30% 86%, 26% 93%, 22% 88%, 18% 92%, 14% 87%, 10% 94%,
+            6% 86%, 2% 90%, 0% 80%
+            /* bord bas */
+        );
+    box-shadow:
+        inset 0 -4px 6px rgba(0, 0, 0, 0.4),
+        0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Reflet juteux */
+.steak::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 10%;
+    width: 80%;
+    height: 10px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+/* Traces de grillade */
+.steak::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(0, 0, 0, 0.2) 10px,
+            rgba(0, 0, 0, 0.2) 12px);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.footer {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    background: linear-gradient(to top, #d6a85b, #f4b042);
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        inset 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 -4px 6px rgba(0, 0, 0, 0.15);
 }
