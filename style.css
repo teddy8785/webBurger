@@ -1,0 +1,18 @@
+.pain {
+  position: relative;
+  width: 80%;
+  height: 250px;
+  background: #f4b042;
+  border-radius: 240px 240px 50px 50px;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.graine {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background: #fff3c4;
+  border-radius: 50%;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
